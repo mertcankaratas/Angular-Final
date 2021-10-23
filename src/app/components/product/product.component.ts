@@ -2,6 +2,7 @@ import { ProductService } from './../../services/product.service';
 import { ProductResponseModel } from './../../models/productResponseModel';
 import { Product } from './../../models/product';
 import { Component, OnInit } from '@angular/core';
+import * as internal from 'stream';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class ProductComponent implements OnInit {
 
   products: Product[] = [];
   dataLoaded=false;
+  test:number=0;
 
 
   constructor(private productService:ProductService) { }
