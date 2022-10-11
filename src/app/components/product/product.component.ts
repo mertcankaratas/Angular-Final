@@ -25,6 +25,7 @@ export class ProductComponent implements OnInit {
     this.activatedRoute.params.subscribe(params=>{
       if(params["categoryId"]){
         this.getProductsByCategory(params["categoryId"])
+
       }else{
         this.getProducts();
       }
@@ -43,6 +44,7 @@ export class ProductComponent implements OnInit {
 
     this.productService.getProductsByCategory(categoryId).subscribe(response =>{
       this.products=response.data
+      console.log(response)
       this.dataLoaded=true;
     });
 
